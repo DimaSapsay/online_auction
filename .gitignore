@@ -30,6 +30,7 @@ MANIFEST
 #my files
 .idea
 *.sqlite3
+online_auction/s_settings.py
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

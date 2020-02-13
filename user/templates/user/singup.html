@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new user</title>
+</head>
+<body>
+    <h1>Create new user</h1>
+    <form method="post" enctype="multipart/form-data">
+        {{ user_form.non_field_errors }}
+        {% csrf_token %}
+        <div class="form-group">
+            {{ singup_form.username.label_tag }}
+            {{ singup_form.username }}
+            <small id="usernameHelp" class="form-text text-muted">{{ singup_form.username.errors }}</small>
+        </div>
+        <div class="form-group">
+            {{ singup_form.email.label_tag }}
+            {{ singup_form.email }}
+            <small id="emailHelp" class="form-text text-muted">{{ singup_form.email.errors }}</small>
+        </div>
+        <div class="form-group">
+            {{ account_form.address.label_tag }}
+            {{ account_form.address }}
+            <small id="addressHelp" class="form-text text-muted">{{ account_form.address.errors }}</small>
+        </div>
+        <div class="form-group">
+            {{ account_form.phone.label_tag }}
+            {{ account_form.phone }}
+            <small id="phoneHelp" class="form-text text-muted">{{ account_form.phone.errors }}</small>
+        </div>
+        <div class="form-group">
+            {{ singup_form.password1.label_tag }}
+            {{ singup_form.password1 }}
+            <small id="emailHelp" class="form-text text-muted">{{ singup_form.password1.errors }}</small>
+        </div>
+        <div class="form-group">
+            {{ singup_form.password2.label_tag }}
+            {{ singup_form.password2 }}
+            <small id="emailHelp" class="form-text text-muted">{{ singup_form.password2.errors }}</small>
+        </div>
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

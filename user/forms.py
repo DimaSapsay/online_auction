@@ -23,3 +23,8 @@ class AccountForm(forms.ModelForm):
     class Meta:
         model = Account
         fields = 'address', 'phone'
+
+
+class SinginForm(forms.Form):
+    username = forms.CharField(max_length=100)
+    password = forms.CharField(widget=forms.PasswordInput)

@@ -17,8 +17,8 @@ class SingupForm(UserCreationForm):
 
 
 class AccountForm(forms.ModelForm):
-    address = forms.CharField(max_length=250)
-    phone = PhoneNumberField()
+    # address = forms.CharField(max_length=250)
+    # phone = PhoneNumberField()
 
     class Meta:
         model = Account
@@ -28,3 +28,15 @@ class AccountForm(forms.ModelForm):
 class SinginForm(forms.Form):
     username = forms.CharField(max_length=100)
     password = forms.CharField(widget=forms.PasswordInput)
+
+
+class EditUserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = 'email',
+
+
+class EditAccountForm(forms.ModelForm):
+    class Meta:
+        model = Account
+        fields = 'address', 'phone'

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Account user</h1>
+<p>User: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Address: {{ user.account.address }}</p>
+<p>Phone: {{ user.account.phone }}</p>
+
+<button><a href="{% url 'user:edit_account' %}">Edit account</a></button>
+
+{% endblock %}
